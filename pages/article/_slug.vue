@@ -79,24 +79,42 @@ export default {
     Comment
   },
   asyncData ({ params, store }) {
-    return Promise.all([
-      store.dispatch('api/getArticle', { slug: params.slug }),
-      store.dispatch('api/getComment', { slug: params.slug })
-    ]).then(([resArticle, resComment]) => {
-      return {
-        ...resArticle.data.article,
-        commentForm: '',
-        commentFormSubmitting: false,
-        commentList: resComment.data.comments
-      }
-    })
+    const requestData = () => {
+      return store.dispatch('api/request', {
+        promise: Promise.all([
+          store.dispatch('api/getArticle', { slug: params.slug }),
+          store.dispatch('api/getComment', { slug: params.slug })
+        ]),
+        success ([resArticle, resComment]) {
+          return {
+            ...resArticle.data.article,
+            commentForm: '',
+            commentFormSubmitting: false,
+            commentList: resComment.data.comments
+          }
+        },
+        fail (error) {
+          if (error.response.status === 401) {
+            store.dispatch('auth/signOut')
+            return requestData()
+          }
+        }
+      })
+    }
+
+    return requestData()
+  },
+  head () {
+    return {
+      title: `${this.title} - Conduit`
+    }
   },
   computed: {
     isAuth () {
       return this.$store.getters['auth/isAuth']
     },
     currentUser () {
-      return this.isAuth && this.$store.state.auth.user || null
+      return this.isAuth && this.$store.state.auth.user || {}
     },
     isCurrentUser () {
       return this.currentUser.username === this.author.username

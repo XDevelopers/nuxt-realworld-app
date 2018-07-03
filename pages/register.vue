@@ -52,6 +52,7 @@ export default {
   components: {
     ErrorMessages
   },
+  middleware: ['auth-forbidden'],
   data () {
     return {
       username: '',
@@ -59,6 +60,11 @@ export default {
       password: '',
       error: {},
       submitting: false
+    }
+  },
+  head () {
+    return {
+      title: 'Sign up - Conduit'
     }
   },
   methods: {

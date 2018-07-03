@@ -45,12 +45,18 @@ export default {
   components: {
     ErrorMessages
   },
+  middleware: ['auth-forbidden'],
   data () {
     return {
       email: '',
       password: '',
       error: {},
       submitting: false
+    }
+  },
+  head () {
+    return {
+      title: 'Sign in - Conduit'
     }
   },
   methods: {
