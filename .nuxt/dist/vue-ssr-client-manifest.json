@@ -2,7 +2,7 @@
   "publicPath": "/_nuxt/",
   "all": [
     "pages/settings.2fdc3b8c1af561d26fa5.js",
-    "pages/article/_slug.b73fa11db558940ca146.js",
+    "pages/article/_slug.d52dcc1bfa7470fe320b.js",
     "pages/index.90f13b7970cd53afd1bb.js",
     "layouts/default.3eca7a1317d17bfc7310.js",
     "pages/register.3c07faa1a183a5717c2d.js",
@@ -11,19 +11,19 @@
     "pages/_user.1197f67d33f79cef751c.js",
     "vendor.6864fb581418808223f7.js",
     "app.cc002642bb346916ed09.js",
-    "manifest.044cbff1c301a0c82cc6.js",
+    "manifest.41cc7bd4ebaafa79f333.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.044cbff1c301a0c82cc6.js",
+    "manifest.41cc7bd4ebaafa79f333.js",
     "vendor.6864fb581418808223f7.js",
     "app.cc002642bb346916ed09.js"
   ],
   "async": [
     "pages/settings.2fdc3b8c1af561d26fa5.js",
-    "pages/article/_slug.b73fa11db558940ca146.js",
+    "pages/article/_slug.d52dcc1bfa7470fe320b.js",
     "pages/index.90f13b7970cd53afd1bb.js",
     "layouts/default.3eca7a1317d17bfc7310.js",
     "pages/register.3c07faa1a183a5717c2d.js",
@@ -467,9 +467,6 @@
     "fe09b044": [
       9
     ],
-    "12fa45dc": [
-      1
-    ],
     "df5530be": [
       8
     ],
@@ -724,6 +721,9 @@
     ],
     "8db5755c": [
       8
+    ],
+    "cd26aee4": [
+      1
     ],
     "893fc166": [
       0
@@ -1142,6 +1142,21 @@
     "42c6581f": [
       8
     ],
+    "a0a07670": [
+      9
+    ],
+    "2f45646c": [
+      9
+    ],
+    "5f4f7b16": [
+      9
+    ],
+    "b9ecf270": [
+      8
+    ],
+    "629e580d": [
+      8
+    ],
     "2ffe9658": [
       8
     ],
@@ -1190,9 +1205,6 @@
     "284d21b1": [
       8
     ],
-    "b9ecf270": [
-      8
-    ],
     "1d1675e2": [
       8
     ],
@@ -1206,18 +1218,6 @@
       8
     ],
     "56307dcd": [
-      8
-    ],
-    "a0a07670": [
-      9
-    ],
-    "2f45646c": [
-      9
-    ],
-    "5f4f7b16": [
-      9
-    ],
-    "629e580d": [
       8
     ],
     "6f2f84be": [
